@@ -49,3 +49,11 @@ if (searchInput) {
         }
     });
 }
+
+// Wait 5 seconds, then show the hero video
+setTimeout(() => {
+    const video = document.getElementById('hero-video');
+    if (video) {
+        video.style.opacity = '1';
+    }
+}, 5000); // 5000 milliseconds = 5 seconds
