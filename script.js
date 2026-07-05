@@ -57,3 +57,4 @@ setTimeout(() => {
         video.style.opacity = '1';
     }
 }, 5000); // 5000 milliseconds = 5 seconds
+
