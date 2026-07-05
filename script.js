@@ -56,5 +56,5 @@ setTimeout(() => {
     if (video) {
         video.style.opacity = '1';
     }
-}, 5000); // 5000 milliseconds = 5 seconds
+}, 7000); // 7000 milliseconds = 7 seconds
 
