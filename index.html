@@ -40,10 +40,14 @@
 <!-- Hero Section with Fast-Paced Video Edit -->
 <header class="hero">
     <div class="video-background">
-        <!-- Added id="hero-video" and style="opacity: 0; transition: opacity 2s;" -->
-        <iframe id="hero-video" src="https://www.youtube.com/embed/RDY97iu1_q8?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=RDY97iu1_q8" 
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen 
-                style="opacity: 0; transition: opacity 2s;"></iframe>
+        <!-- Added id="hero-video" and start=7 to sync with the 7-second fade-in timer -->
+        <iframe id="hero-video" 
+                src="https://www.youtube.com/embed/RDY97iu1_q8?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=RDY97iu1_q8&start=7" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen 
+                style="opacity: 0; transition: opacity 2s;">
+        </iframe>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
