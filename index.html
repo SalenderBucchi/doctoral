@@ -38,19 +38,21 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Fast-Paced Video Edit -->
-    <header class="hero">
-        <div class="video-background">
-            <!-- 4K Sholay Trailer / Fast Paced Edit playing silently in the background -->
-            <iframe src="https://www.youtube.com/embed/RDY97iu1_q8?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=RDY97iu1_q8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p>50 YEARS OF EXCELLENCE</p>
-            <h1>THE FINAL CUT</h1>
-            <a href="#discover" class="btn-primary">Discover the Legacy <i class="fas fa-chevron-down"></i></a>
-        </div>
-    </header>
+<!-- Hero Section with Fast-Paced Video Edit -->
+<header class="hero">
+    <div class="video-background">
+        <!-- Added id="hero-video" and style="opacity: 0; transition: opacity 2s;" -->
+        <iframe id="hero-video" src="https://www.youtube.com/embed/RDY97iu1_q8?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=RDY97iu1_q8" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen 
+                style="opacity: 0; transition: opacity 2s;"></iframe>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p>50 YEARS OF EXCELLENCE</p>
+        <h1>THE FINAL CUT</h1>
+        <a href="#discover" class="btn-primary">Discover the Legacy <i class="fas fa-chevron-down"></i></a>
+    </div>
+</header>
 
     <!-- Collections Section -->
     <section id="discover" class="collection-section">
