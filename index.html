@@ -3,43 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier Zero</title>
+    <title>SHOLAY - The Official Legacy</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for standard Luxury Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Top Utility Bar (Mimicking Rolex Country Selector) -->
+    <div class="top-bar">
+        <span>Choose a language or region to view content specific to your location.</span>
+        <div class="region-selector">
+            <select>
+                <option>India (English)</option>
+                <option>India (Hindi)</option>
+                <option>International</option>
+            </select>
+            <button>Change</button>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
     <nav>
-        <div class="logo">ATELIER <span>ZERO</span></div>
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#studio">Studio</a>
-            <a href="#contact">Contact</a>
+        <div class="nav-left">
+            <button class="menu-btn"><i class="fas fa-bars"></i> Menu</button>
+        </div>
+        <div class="logo">S H O L A Y</div>
+        <div class="nav-right">
+            <button onclick="toggleModal('search-modal')"><i class="fas fa-search"></i></button>
+            <button onclick="toggleModal('location-modal')"><i class="fas fa-map-marker-alt"></i></button>
+            <button onclick="toggleModal('favorites-modal')"><i class="fas fa-heart"></i></button>
         </div>
     </nav>
 
+    <!-- Hero Section with Fast-Paced Video Edit -->
     <header class="hero">
-        <div class="hero-content fade-up">
-            <h1>We build <em>digital</em> reality.</h1>
-            <p>Code is our medium. Elegance is our baseline. We engineer digital experiences for those who understand that less is always more.</p>
+        <div class="video-background">
+            <!-- 4K Sholay Trailer / Fast Paced Edit playing silently in the background -->
+            <iframe src="https://www.youtube.com/embed/RDY97iu1_q8?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=RDY97iu1_q8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p>50 YEARS OF EXCELLENCE</p>
+            <h1>THE FINAL CUT</h1>
+            <a href="#discover" class="btn-primary">Discover the Legacy <i class="fas fa-chevron-down"></i></a>
         </div>
     </header>
 
-    <section class="info-section">
-        <div class="info-grid">
-            <div class="info-block fade-up">
-                <h3>01. Engineering</h3>
-                <p>Flawless backend architecture paired with intuitive logic.</p>
+    <!-- Collections Section -->
+    <section id="discover" class="collection-section">
+        <h2>The Ramgarh Collection</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?q=80&w=800&auto=format&fit=crop" alt="Thakur">
+                <h3>The Authority</h3>
+                <p>Baldev Singh Edition</p>
             </div>
-            <div class="info-block fade-up" style="transition-delay: 0.2s;">
-                <h3>02. Aesthetics</h3>
-                <p>Visuals stripped down to their most impactful, essential forms.</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?q=80&w=800&auto=format&fit=crop" alt="Jai & Veeru">
+                <h3>The Brotherhood</h3>
+                <p>Jai & Veeru Edition</p>
             </div>
-            <div class="info-block fade-up" style="transition-delay: 0.4s;">
-                <h3>03. Execution</h3>
-                <p>Deployed with absolute precision. No compromises.</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1506792006437-256b665541e2?q=80&w=800&auto=format&fit=crop" alt="Gabbar">
+                <h3>The Rebellion</h3>
+                <p>Gabbar Singh Edition</p>
             </div>
         </div>
     </section>
+
+    <!-- Interactive Modals (For full depth/functionality) -->
+    
+    <!-- Search Modal -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal('search-modal')">&times;</span>
+            <h2>What are you looking for?</h2>
+            <input type="text" placeholder="Search characters, quotes, or editions..." id="searchInput">
+            <div class="search-results" id="searchResults">
+                <!-- JS will populate -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Modal -->
+    <div id="location-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal('location-modal')">&times;</span>
+            <h2>Store & Cinema Locator</h2>
+            <p>Find the nearest location to experience the Final Cut.</p>
+            <input type="text" placeholder="Enter your city or zip code...">
+            <ul class="location-list">
+                <li><i class="fas fa-map-pin"></i> Ramgarh Talkies, District 1</li>
+                <li><i class="fas fa-map-pin"></i> Maratha Mandir, Mumbai</li>
+                <li><i class="fas fa-map-pin"></i> Regal Cinema, Delhi</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div id="favorites-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal('favorites-modal')">&times;</span>
+            <h2>Your Favorites <i class="fas fa-heart"></i></h2>
+            <p>You have not saved any editions yet. Explore the collection to add to your wishlist.</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
